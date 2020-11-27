@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Arquitectura Micro Servicios con Java</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="css/lib/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section data-background="img/portada.svg">
+			</section>
+			<section>
+				<h3>¿Cómo seleccionar la arquítectura adecuada para crear una aplicación?</h2>
+			</section>
+			<section>
+				<p>En búsqueda de la respuesta</p>
+				<p class="fragment fade-up">Despúes de haber participado en varios proyectos</strong> </p>
+				<p class="fragment fade-up">Despúes de utilizar diferentes tecnologías </p>
+				<p class="fragment fade-up">Despúes de colaborar con programadores más experimentados </p>
+				<p class="fragment fade-up">Un consultor Ultra Senior me dió la respuesta:</p>
+				<p class="fragment fade-up">¡DEPENDE!</p>
+				<aside class="notes">
+					CaDa proyecto es diferente, tienee sus propias características
+				</aside>
+			</section>
+			<section>
+				<p><strong>Cada proyecto es diferente</strong></p>
+				<p>
+					La <strong>necesidad</strong> del cliente, la <strong>visión a futuro</strong> tiene mucho que ver
+				</p>
+				<aside class="notes">
+					A esto es a lo que podemos aspirar.
+					Depende de cada sistema definir que es ese "casi" que no debe fallar.
+				</aside>
+			</section>
+			<section>Arquitectura Monolítica: Ventaja</section>
+			<section>
+				<section>
+					<p><strong>Fácil de Desarrollar</strong></p>
+					<p>El objetivo de las herramientas de desarrollo y los IDEs actuales es respaldar el desarrollo de
+						aplicaciones monolíticas.</p>
+				</section>
+				<section>
+					<p><strong>Fácil de Implementar</strong></p>
+					<p>En el caso de Java simplemente necesita implementar el archivo WAR.</p>
+				</section>
+				<section>
+					<p><strong>Fácil de Escalar</strong></p>
+					<p>Se puede escalar la aplicación ejecutando varias copias de la aplicación detrás de un balanceador
+						de carga</p>
+				</section>
+			</section>
+			<section>
+				<p><strong>Ejemplo de Arquitectura Monolítica</strong></p>
+				<p>Generalmente se parte de un diseño de base de datos</p>
+				<img src="img/erp_model.png" style="height: fit-content; width: fit-content;" alt="">
+			</section>
+			<section <p>Se parte de una estructura divida en capas</p>
+				<img src="img/estructura_monolithic.png" style="height: fit-content; width: fit-content;" alt="">
+			</section>
+			<section>
+				<p>Dentro del proyecto está todo</p>
+				<img src="img/estructura_java_mono.png" style="height: fit-content; width: fit-content;" alt="">
+			</section>
+			<section>
+				<p>Aplicación Monolítica</p>
+				<img src="img/demomonolithic.gif" alt="">
+			</section>
+
+			<section>
+				<p>Aplicación de Ejemplo</p>
+				<img src="img/demomonolithic.gif" alt="">
+			</section>
+
+			<section>
+				<h2>Arquitectura de Microservicios</h2>
+				<blockquote>
+					Es un enfoque para desarrollar una sola aplicación como un conjunto de pequeños servicios, cada uno
+					ejecutándose en su propio proceso y comunicándose con mecanismos ligeros, a menudo una API de
+					recursos HTTP.
+				</blockquote>
+				<p><strong>Martin Fowler</strong></p>
+				</p>
+			</section>
+
+			<section>
+				<h2>Microservicios: Características</h2>
+				<section>
+					<p><strong>Altamente mantenible y comprobable</strong></p>
+				</section>
+				<section>
+					<p><strong>Organizado en torno a las capacidades comerciales</strong></p>
+				</section>
+				<section>
+					<p><strong>Propiedad de un equipo pequeño</strong></p>
+				</section>
+				<section>
+					<p><strong>No es afin a una tecnología en particular</strong></p>
+				</section>
+
+			</section>
+
+			<section>
+				<h3>Microservicios: Producto no Proyecto</h3>
+				<section>
+					<p><strong>La ideología de proyecto lo hace difícil de mantener</strong></p>
+				</section>
+				<section>
+					<p><strong>La mentalidad de producto se vincula con las capacidades comerciales</strong></p>
+				</section>
+				<section>
+					<p><strong>Propiedad de un equipo pequeño</strong></p>
+				</section>
+				<section>
+					<p><strong>En lugar de considerar el software como un conjunto de funciones por completar, existe
+							una relación continua en la que la pregunta es: ¿cómo puede el software ayudar a sus
+							usuarios a mejorar la capacidad empresarial?</strong></p>
+				</section>
+			</section>
+
+			<section>
+				<p>API de Microservicios como Producto: Twitter</p>
+				<img src="img/twitter_api_product.png" alt="">
+			</section>
+
+			<section>
+				<p>API de Microservicios como Producto: Shopify</p>
+				<img src="img/shopify_api_product.png" alt="">
+			</section>
+
+			<section>
+				<p><strong>Importancia de los Microservicios</strong></p>
+				<p>
+					<a href="https://www.jetbrains.com/es-es/lp/devecosystem-2020/microservices/">Ecosystema de
+						Microservicios
+						Jetbrains</a><br>https://www.jetbrains.com/es-es/lp/devecosystem-2020/microservices/
+				</p>
+				<img src="img/grafica_comunicacion_distribuida.png" alt="">
+
+			</section>
+
+			<section>
+				<p>Microservicios: Eclipse Microprofile</p>
+				<img src="img/microprofile_home.png" alt="">
+			</section>
+
+			<section>
+				<p>Microservicios: Eclipse Microprofile Starter</p>
+				<img src="img/microprofile_starter.png" alt="">
+			</section>
+
+			<section>
+				<p>Microservicios: Spring Boot Starter</p>
+				<img src="img/starter_spring_io.png" alt="">
+			</section>
+
+			<section>
+				<p><strong>Ejemplo Micro Servicio</strong></p>
+				<section>
+					<p><strong>Definir una API para Consultar Productos</strong></p>
+					<p>Todalmente independiente de los otros módulos</p>
+				</section>
+				<section>
+					<p><strong>Propia Base de Datos</strong></p>
+					<p>Solo contiene el catálogo de productos</p>
+				</section>
+				<section>
+					<p><strong>La funcionalidad se expone a través de Endpoints</strong></p>
+					<p>Funcionalidad para Agregar, Obtener un Producto y Consultar</p>
+				</section>
+			</section>
+
+			<section>
+				<p>Microservicios: Spring Boot Starter</p>
+				<img src="img/microservicio_pom.png" alt="">
+			</section>
+
+			<section>
+				<p>Microservicios: Consumir API</p>
+				<img src="img/postman_post.png" alt="">
+			</section>
+
+
+			<section data-background="img/eShopOnContainers-architecture.png">
+			</section>
+
+			<section>
+				<p>Referencia</p>
+				<ul>
+					<li style="font-size: 35px;"><a href="https://microservices.io/patterns/monolithic.html">Pattern:
+							Monolithic Architecture</a><br>https://microservices.io/patterns/monolithic.html
+					</li>
+					<li style="font-size: 35px;"><a href="https://github.com/dotnet-architecture/eShopOnContainers">.NET
+							Microservices Sample Reference
+							Application</a><br>https://github.com/dotnet-architecture/eShopOnContainers
+					</li>
+					<li style="font-size: 35px;"><a
+							href="https://martinfowler.com/articles/microservices.html">Microservices a definition of
+							this new architectural term</a><br>https://martinfowler.com/articles/microservices.html
+					</li>
+					<li style="font-size: 35px;"><a
+							href="https://tmsanchez.github.io/arqmicjavaslides/#/">Slides de la presentación</a><br>https://tmsanchez.github.io/arqmicjavaslides/#/
+					</li>
+
+					<li style="font-size: 35px;"><a
+							href="https://www.manning.com/books/spring-in-action-fifth-edition">Spring In Action Fifth
+							Edition</a><br>https://www.manning.com/books/spring-in-action-fifth-edition
+					</li>
+
+
+				</ul>
+			</section>
+
+			<section>
+				<p>Código de programas de ejemplo</p>
+				<ul>
+					<li style="font-size: 35px;"><a href="https://github.com/tmsanchez/conferenciaarqmicjava">Conferencia Arquitectura de Microservicios con Java
+							</a><br>https://github.com/tmsanchez/conferenciaarqmicjava
+					</li>
+				</ul>
+			</section>
+			<section>
+				<img src="img/gracias.png" alt="">
+			</section>
+		</div>
+
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			width: 960,
+			height: 700,
+
+			// Factor of the display size that should remain empty around
+			// the content
+			margin: 0.04,
+
+			// Bounds for smallest/largest possible scale to apply to content
+			minScale: 0.2,
+			maxScale: 2.0,
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
