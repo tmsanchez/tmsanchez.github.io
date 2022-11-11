@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Resuelve esa pequeña necesidad y compártela como open source</title>
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="framework author" content="Hakim El Hattab">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="css/lib/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section data-background="img/portada.svg">
+			</section>
+			<section>
+				<h3>¿Qué pasa cuando un software que utilizas para un proyecto es muy bueno pero la funcionalidad que
+					necesitas solo se encuentra en la versión "Enterprise"?</h3>
+			</section>
+			<section>
+				<p>¿Te suena familar?</p>
+				<img src="img/pirateflag.png" alt="">
+				<img src="img/buscakeygen.gif" alt="">
+			</section>
+			<section>
+				<p>Esto solo pasa en otro país</p>
+				<img src="img/gogleando.gif" alt="">
+			</section>
+
+			<section>
+
+				<p>Tal vez esta historia te suena familiar</p>
+
+				<p class="fragment fade-up">Te encargan hacer el modelo y diseño de una base de datos</p>
+
+				<p class="fragment fade-up">De inmediato descartas hacerlo en un procesador de textos</p>
+
+				<p class="fragment fade-up">Tampoco quieres sufrir haciendo dibujitos</p>
+
+				<p class="fragment fade-up">Decides usar una <strong>herramienta diseñada para ese
+						propósito</strong></p>
+
+			</section>
+			<section>
+				<p><strong>MySqlWorkbench</strong></p>
+				<p>
+					Maneja los conceptos de base de datos realacionales: <strong>Tablas, Relaciones, Indices, Tipos de
+						Datos</strong>
+				</p>
+			</section>
+			<section>
+				<p>Iniciamos con modelado de la base de datos</p>
+				<img src="img/modelandobd.gif" alt="">
+			</section>
+			<section>
+				<p><strong>El diagrama está excelente</strong></p>
+				<p class="fragment fade-left">
+					Pero te piden que generes <strong>la documentación y el diccionario de datos</strong>
+				</p>
+				<p class="fragment fade-up">
+					Buscas en las opciones del programa <strong>y no encuentras esa opción</strong>
+				</p>
+				<p class="fragment fade-down">
+					Recurres al arma secreta de todos los devs <strong>(si, google)</strong>
+				</p>
+				<p class="fragment fade-right">
+					¡¡Sorpresa!!
+				</p>
+				<p class="fragment fade-up">
+					<strong>esa funcionalidad solo está en la versión ENTERPRISE</strong>
+				</p>
+			</section>
+			<section>
+				<section>
+					<p><strong>La primer alternativa:</strong></p>
+					<p>Creas tu formato en una hoja de cálculo con las clasicas columnas</p>
+					<img src="img/hojacalculo.png" alt="">
+				</section>
+				<section>
+					<p><strong>Comenzado la documentación....</strong></p>
+					<img src="img/avanzando.gif" alt="">
+				</section>
+				<section>
+					<p><strong>Pero tu proyecto tiene 40 tablas</strong></p>
+					<p>En ese momento decides buscar una alternativa para generar la documentación</p>
+				</section>
+				<section>
+					<p><strong>¡Y la respuesta llega del cielo!</strong></p>
+					<img src="img/sangoogle.png" alt="">
+				</section>
+
+			</section>
+			<section>
+				<img src="img/memestack.png" alt="">
+			</section>
+			<section>
+				<h2>Inicia la solución del problema y el aprendizaje</h2>
+			</section>
+			<section>
+				<a href="https://dev.mysql.com/doc/workbench/en/wb-extending.html">Appendix C Extending Workbench</a>
+				<img src="img/extendworkbench.png" style="height: fit-content; width: fit-content;" alt="">
+			</section>
+			<section>
+				<section>
+					<p>"Workbench model data, such as diagrams, schemas, and tables, is stored in a hierarchy of objects
+						that can be accessed by any plugin"</p>
+					<img src="img/dataorganization.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+				<section>
+					<h3>Pero para MysSQLWorkbench 5.6 se usaba.....</h3>
+					<img src="img/julio2010.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h4>Primer aprendizaje: LUA SCRIPT</h4>
+					<img src="img/programminglua.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+				<section>
+					<img src="img/primerscriptlua.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+				<section>
+					<h2>No es mucho... pero es un trabajo honesto</h2>
+					<img src="img/salidascriptlua.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+			</section>
+			<section>
+				<h4>Aprendizaje de LUA</h4>
+				<p class="fragment fade-left">- Poner comentarios</p>
+				<p class="fragment fade-up">- Iterar sobre una colección de objetos</p>
+				<p class="fragment fade-right">- Mostrar mensajes</p>
+				<p class="fragment fade-down">- Concatenar Strings</p>
+				<p class="fragment fade-left">- Manejo de arreglos</p>
+				<p class="fragment fade-right">- Flujos condicionales</p>
+			</section>
+			<section>
+				<h4>Segundo aprendizaje: Colaboración</h4>
+				<img src="img/colaboracion.png" alt="">
+			</section>
+			<section>
+				<h4>Tercer aprendizaje: Compartir donde se haga más fácil</h4>
+				<p>Puedes utilizar un Blog</p>
+				<p>Después de pelear con la sintáxis en HTML para el blog: Dropbox</p>
+			</section>
+			<section>
+				<img src="img/marzo2015.png" alt="">
+			</section>
+			<section>
+				<section>
+					<h4>Cuarto aprendizaje: Actualizar y compartir en otro idioma</h4>
+					<img src="img/marzo2015blog.png" alt="">
+				</section>
+				<section>
+					<p>
+						<a
+							href="https://dataedo.com/kb/tools/mysql-workbench/documentation-generator-plugins">https://dataedo.com/kb/tools/mysql-workbench/documentation-generator-plugins</a>
+					</p>
+
+					<img src="img/dataedo1.png" alt="">
+				</section>
+				<section>
+					<img src="img/plugininyoutube.gif" alt="">
+				</section>
+				<section>
+					<p>https://www.chunho-ling.com</p>
+					<img src="img/chunho-ling.png" alt="">
+				</section>
+			</section>
+			<section>
+				<h4>Quinto aprendizaje: Retroalimentación</h4>
+				<img src="img/retroalimentacion.png" alt="">
+			</section>
+
+			<section>
+				<section>
+					<h4>Sexto aprendizaje: Python</h4>
+					<img src="img/pluginphyton.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+				<section>
+					<img src="img/pluginmarkdown.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+				<section>
+					<img src="img/contribucion.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+			</section>
+
+			<section>
+				<img src="img/noviembre112022.png" alt="">
+			</section>
+
+			<section>
+				<section>
+					<h4>Sexto aprendizaje: Comunidad</h4>
+					<img src="img/comunidadccoss.png" style="height: fit-content; width: fit-content;" alt="">
+				</section>
+			</section>
+
+
+			<section>
+				<p>Referencias</p>
+				<ul>
+
+					<li style="font-size: 25px;"><a href="https://dev.mysql.com/doc/workbench/en/wb-extending.html">Appendix C Extending Workbench</a>
+						<br>https://dev.mysql.com/doc/workbench/en/wb-extending.html
+					</li>
+
+					
+
+					<li style="font-size: 25px;"><a href="http://tmsanchezdev.blogspot.com/">El blog de TMSANCHEZ</a>
+						<br>http://tmsanchezdev.blogspot.com
+					</li>
+
+
+					<li style="font-size: 25px;"><a href="https://github.com/tmsanchez/workbenchscripts/">Workbench
+							Scripts</a>
+						<br>https://github.com/tmsanchez/workbenchscripts
+					</li>
+
+
+
+					<li style="font-size: 25px;"><a href="https://www.youtube.com/watch?v=yYSmWYUgfgk">Export your Data
+							Dictionary to HTML with MySQL Workbench</a>
+						<br>https://www.youtube.com/watch?v=yYSmWYUgfgk
+					</li>
+
+					<li style="font-size: 25px;"><a
+							href="https://dataedo.com/kb/tools/mysql-workbench/documentation-generator-plugins">4
+							database documentation / data dictionary generator plugins for MySQL Workbench</a>
+						<br>https://dataedo.com/kb/tools/mysql-workbench/documentation-generator-plugins
+					</li>
+
+					<li style="font-size: 25px;"><a
+							href="https://www.chunho-ling.com/mysql-generate-data-dictionary/">MySQL Generate data
+							dictionary</a>
+						<br>https://www.chunho-ling.com/mysql-generate-data-dictionary
+					</li>
+
+
+
+					<li style="font-size: 25px;"><a href="http://www.lua.org/pil/contents.html">Programming in Lua
+							(first edition)</a>
+						<br>http://www.lua.org/pil/contents.html
+					</li>
+
+
+
+				</ul>
+			</section>
+
+			<section>
+				<p>Presentación</p>
+				<ul>
+					<li style="font-size: 35px;"><a
+							href="https://tmsanchez.github.io/ccoss2022">Resuelve esa pequeña necesidad y compártela como open source
+						</a><br>https://tmsanchez.github.io/ccoss2022
+					</li>
+					<li>
+						<img src="img/qrslides.png"  alt="">
+					</li>
+				</ul>
+			</section>
+			<section>
+				<img src="img/gracias.png" alt="">
+			</section>
+		</div>
+
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			width: 960,
+			height: 700,
+
+			// Factor of the display size that should remain empty around
+			// the content
+			margin: 0.04,
+
+			// Bounds for smallest/largest possible scale to apply to content
+			minScale: 0.2,
+			maxScale: 2.0,
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>
